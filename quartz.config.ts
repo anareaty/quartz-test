@@ -31,7 +31,8 @@ const config: QuartzConfig = {
         lightMode: {
           light: "hsl(34, 33%, 98%)",
           lightgray: "hsl(35, 36%, 95%)",
-          gray: "hsl(35, 35%, 90%)",
+          fadedgray: "hsl(35, 35%, 90%)",
+          gray: "hsl(34, 37%, 70%)",
           darkgray: "hsl(31, 35%, 40%)",
           dark: "hsl(31, 45%, 20%)",
           secondary: "hsl(9, 60%, 60%)",
