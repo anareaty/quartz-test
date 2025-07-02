@@ -15,7 +15,7 @@
 }
 
 .sidebar.left .search {
-  background-color: var(--gray);
+  background-color: var(--fadedgray);
 }
 
 .sidebar.right .search {
@@ -68,7 +68,7 @@
     display: none;
 }
 
-@media (max-width: 1200px) {
+@media not (min-width: 1200px) {
   .rigth.sidebar .flex-component {
     display: none;
   }
