@@ -26,6 +26,10 @@
   background-color: var(--lightgray);
 }
 
+.sidebar.left > .page-title {
+  margin: 0 auto;
+}
+
 @media (min-width: 1200px) {
 .right.sidebar .flex-component
 {
