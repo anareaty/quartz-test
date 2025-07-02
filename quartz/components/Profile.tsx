@@ -5,7 +5,7 @@ import { classNames } from "../util/lang"
 const Profile: QuartzComponent = () => {
   const title = "fff"
   if (title) {
-    return <h1 class={classNames(displayClass, "article-title")}>{title}</h1>
+    return <h1>{title}</h1>
   } else {
     return null
   }
