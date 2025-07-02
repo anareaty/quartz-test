@@ -3,8 +3,7 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 import { classNames } from "../util/lang"
 
 const Profile: QuartzComponent = () => {
-  const title = "fff"
-  return <h1>{title}</h1>
+  return <h1>jjjjj</h1>
 }
 Profile.css = `
 .article-title {
