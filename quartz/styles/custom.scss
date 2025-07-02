@@ -4,7 +4,7 @@
   max-width: unset;
 }
 
-.page > #quartz-body .sidebar {
+.page > #quartz-body .sidebar.left {
   background-color: var(--lightgray);
 }
 
@@ -16,9 +16,7 @@
   margin-left: auto;
 }
 
-.page > #quartz-body .right.sidebar:empty {
-  display: none;
-}
+
 
 .page-footer {
   display: flex;
