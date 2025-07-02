@@ -3,7 +3,13 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 import { classNames } from "../util/lang"
 
 const Profile: QuartzComponent = () => {
-  return <img src='static/avatar.jpg' class='avatar-image' alt='avatar-image'/>
+  return <div> 
+    <img src='static/avatar.jpg' class='avatar-image' alt='avatar-image'/>
+    {Component.Flex(
+     <div></div>
+     <div></div>
+    )}
+    </div>
 }
 Profile.css = `
 img.avatar-image {
