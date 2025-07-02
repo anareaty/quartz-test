@@ -14,8 +14,12 @@
   padding: 2rem 2rem 2rem;
 }
 
-.sidebar .search {
+.sidebar.left .search {
   background-color: var(--gray);
+}
+
+.sidebar.right .search {
+  background-color: var(--lightgray);
 }
 
 .sidebar.left {
