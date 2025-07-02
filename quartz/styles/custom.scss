@@ -4,8 +4,18 @@
   max-width: unset;
 }
 
+.page > #quartz-body .sidebar {
+  padding: 2rem 2rem 2rem;
+}
+
 .page > #quartz-body .sidebar.left {
   background-color: var(--lightgray);
+}
+
+.left.sidebar .page-title,
+.right.sidebar .flex-component
+{
+  margin-bottom: 2rem;
 }
 
 .page > #quartz-body .center,
