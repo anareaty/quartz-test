@@ -2,7 +2,7 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { classNames } from "../util/lang"
 
-const Profile: QuartzComponent = () => <img src="avatar.jpg">
+const Profile: QuartzComponent = () => {return <img src="avatar.jpg">}
 
 
 Profile.css = `
