@@ -15,6 +15,7 @@ const Profile: QuartzComponent = () => {
 Profile.css = `
 img.avatar-image {
   border-radius: 50%;
+  margin: 0;
 }
 div.profile-card {
   width: 180px;
