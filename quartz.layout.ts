@@ -4,7 +4,9 @@ import * as Component from "./quartz/components"
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [  Component.PageTitle(),
+  header: [  
+    /*
+    Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [
@@ -16,6 +18,7 @@ export const sharedPageComponents: SharedLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
+    */
   ],
   afterBody: [],
   footer: Component.Footer({
@@ -41,6 +44,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.TagList(),
   ],
   left: [
+    
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
