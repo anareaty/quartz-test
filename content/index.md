@@ -1,5 +1,5 @@
 ---
-Paperless forest
+title: Paperless forest
 ---
 
 Добро пожаловать на мой сайт!
