@@ -8,7 +8,7 @@ const Profile: QuartzComponent = () => {
 Profile.css = `
 img.avatar-image {
   border-radius: 50%;
-  width: 200px;
+  width: 180px;
   margin: 0 auto;
 }
 `
