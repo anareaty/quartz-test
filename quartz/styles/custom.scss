@@ -1,5 +1,9 @@
 @use "./base.scss";
 
+.page {
+  max-width: unset;
+}
+
 .page > #quartz-body .sidebar {
   background-color: var(--lightgray);
 }
