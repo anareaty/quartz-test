@@ -8,14 +8,14 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
-    pageTitleSuffix: "",
+    pageTitle: "Paperless forest",
+    pageTitleSuffix: "Сайт про всякие штуки",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
-    locale: "en-US",
+    locale: "ru-RU",
     baseUrl: "quartz.jzhao.xyz",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
@@ -23,7 +23,7 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
+        header: "Philosopher",
         body: "Source Sans Pro",
         code: "IBM Plex Mono",
       },
