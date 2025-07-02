@@ -12,6 +12,7 @@
 
 .page > #quartz-body .sidebar {
   padding: 2rem 2rem 2rem;
+  gap: 1rem;
 }
 
 .sidebar.left .search {
@@ -139,5 +140,6 @@ ul.tags {
 }
 
 div.explorer {
+  margin-top: 1rem;
   border-top: 1px solid var(--fadedgray)
 }
