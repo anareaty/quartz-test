@@ -1,13 +1,13 @@
 
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { classNames } from "../util/lang"
-import * as Component from "./index"
+import Flex from "./Flex"
 
 const Profile: QuartzComponent = () => {
   return <div> 
     <img src='static/avatar.jpg' class='avatar-image' alt='avatar-image'/>
     {
-      Component.Flex({
+      Flex({
   components: [
     {
       Component: <div>ggg</div>,
