@@ -5,13 +5,18 @@ import { classNames } from "../util/lang"
 const Profile: QuartzComponent = () => {
   return <div> 
     <img src='static/avatar.jpg' class='avatar-image' alt='avatar-image'/>
-    {Component.Flex({
-      components: [
-        { Component: <div>fff</div>,},
-        { Component: <div>ddd</div> },
-        
-      ],
-    })}
+    {
+      Component.Flex({
+  components: [
+    {
+      Component: <div>ggg</div>,
+      grow: true, // Search will grow to fill available space
+    },
+    { Component: <div>ggg</div> }, // Darkmode keeps its natural size
+  ],
+  direction: "row",
+})
+    }
     </div>
 }
 Profile.css = `
