@@ -6,7 +6,7 @@ const Profile: QuartzComponent = () => {
   return <img src='static/avatar.jpg' class='avatar-image'>avatar image</img>
 }
 Profile.css = `
-.avatar-image {
+img.avatar-image {
   border-radius: 50%;
 }
 `
