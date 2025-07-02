@@ -1,7 +1,7 @@
 
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { classNames } from "../util/lang"
-import * as Component from "./quartz/components"
+import * as Component from "./index"
 
 const Profile: QuartzComponent = () => {
   return <div> 
