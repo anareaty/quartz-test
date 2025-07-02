@@ -114,4 +114,21 @@ a {
 
 .tag-link {
   font-size: 0.9rem;
+  padding: 0.1rem 0.4rem;
+}
+
+hr {
+  background-color: var(--fadedgray);
+}
+
+.graph > .graph-outer {
+  border-color: var(--fadedgray);
+}
+
+.content-meta {
+  margin-bottom: 0.5rem;
+}
+
+ul.tags {
+  margin-top: 0.5rem;
 }
