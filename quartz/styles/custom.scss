@@ -35,3 +35,19 @@
   }
 }
 
+.rigth.sidebar .flex-component {
+    display: flex;
+  }
+  .left.sidebar .flex-component {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+  .rigth.sidebar .flex-component {
+    display: none;
+  }
+  .left.sidebar .flex-component {
+    display: flex;
+  }
+}
+
