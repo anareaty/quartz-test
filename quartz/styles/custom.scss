@@ -12,6 +12,14 @@
   background-color: var(--lightgray);
 }
 
+.sidebar.left .search {
+  background-color: var(--gray);
+}
+
+.sidebar.right .search {
+  background-color: var(--lightgray);
+}
+
 .left.sidebar .page-title,
 .right.sidebar .flex-component
 {
