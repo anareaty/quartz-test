@@ -69,10 +69,10 @@
 }
 
 @media not (min-width: 1200px) {
-  .rigth.sidebar .flex-component {
+  .page > #quartz-body .rigth.sidebar .flex-component {
     display: none;
   }
-  .left.sidebar .flex-component {
+  .page > #quartz-body .left.sidebar .flex-component {
     display: flex;
   }
 }
