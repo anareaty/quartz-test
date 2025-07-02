@@ -20,4 +20,13 @@
   display: none;
 }
 
+.page-footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-footer > .backlinks,
+.page-footer > .graph {
+  width: 50%;
+}
 
