@@ -6,8 +6,11 @@ const Profile: QuartzComponent = () => {
   return <div> 
     <img src='static/avatar.jpg' class='avatar-image' alt='avatar-image'/>
     {Component.Flex(
-     <div></div>
-     <div></div>
+     <div>
+       <div>ff</div>
+       <div>hh</div>
+     </div>
+     
     )}
     </div>
 }
