@@ -5,13 +5,13 @@ import { classNames } from "../util/lang"
 const Profile: QuartzComponent = () => {
   return <div> 
     <img src='static/avatar.jpg' class='avatar-image' alt='avatar-image'/>
-    {Component.Flex(
-     <div>
-       <div>ff</div>
-       <div>hh</div>
-     </div>
-     
-    )}
+    {Component.Flex({
+      components: [
+        { Component: <div>fff</div>,},
+        { Component: <div>ddd</div> },
+        
+      ],
+    })}
     </div>
 }
 Profile.css = `
