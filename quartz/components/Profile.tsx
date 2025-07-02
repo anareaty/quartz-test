@@ -4,27 +4,24 @@ import { classNames } from "../util/lang"
 import Flex from "./Flex"
 
 const Profile: QuartzComponent = () => {
-  return <div> 
+  return <div class='profile-card'> 
     <img src='static/avatar.jpg' class='avatar-image' alt='avatar-image'/>
-    {
-      Flex({
-  components: [
-    {
-      Component: <div>ggg</div>,
-      grow: true, // Search will grow to fill available space
-    },
-    { Component: <div>ggg</div> }, // Darkmode keeps its natural size
-  ],
-  direction: "row",
-})
-    }
+    <div class="social-links">
+      <a src="">github</a>
+      <a src="">mastodon</a>
+    </div>
     </div>
 }
 Profile.css = `
 img.avatar-image {
   border-radius: 50%;
+}
+div.profile-card {
   width: 180px;
   margin: 0 auto;
+}
+div.social-links {
+  display: flex;
 }
 `
 
