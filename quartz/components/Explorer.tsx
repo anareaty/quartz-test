@@ -73,6 +73,9 @@ export default ((userOpts?: Partial<Options>) => {
           mapFn: opts.mapFn.toString(),
         })}
       >
+
+
+        {/*
         <button
           type="button"
           class="explorer-toggle mobile-explorer hide-until-loaded"
@@ -116,6 +119,7 @@ export default ((userOpts?: Partial<Options>) => {
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
         </button>
+        */}
         <div class="explorer-content" aria-expanded={false}>
           <OverflowList class="explorer-ul" />
         </div>
