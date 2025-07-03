@@ -14,13 +14,19 @@
 
 
 
-/*
+
 @media not (min-width: 1200px) {
   .page > #quartz-body {
     padding: 0;
   }
 }
-*/
+
+@media not (min-width: 800px) {
+  .page > #quartz-body {
+    padding: 0 1rem;
+  }
+}
+
 
 
 
