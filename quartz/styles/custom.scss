@@ -107,9 +107,9 @@
 @media not (min-width: 800px) {
 .page > #quartz-body .center,
 .page > #quartz-body footer {
-  padding: 0 20px;
-  min-width: min(calc(100% - 40px), 900px);
-  max-width: min(calc(100% - 40px), 900px);
+  padding: 0 30px;
+  min-width: min(calc(100% - 60px), 900px);
+  max-width: min(calc(100% - 60px), 900px);
   margin-left: auto;
   }
 }
