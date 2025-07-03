@@ -24,6 +24,7 @@
 @media not (min-width: 800px) {
   .page > #quartz-body .sidebar.left:has(.explorer){
     padding: 0.5rem;
+    background-color: var(--lightgray);
   }
 }
 
@@ -52,10 +53,7 @@
 }
 }
 
-.sidebar.left {
-  background-color: var(--lightgray) !important;
-  
-}
+
 
 .page > #quartz-body .sidebar.right {
   padding-left: 0;
