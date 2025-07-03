@@ -101,9 +101,9 @@ function _getFolders(slug: FullSlug): SimpleSlug[] {
 }
 
 export const FeedPage: QuartzEmitterPlugin<Partial<FeedPageOptions>> = (userOpts) => {
-
+return {
   async *emit(ctx, content, resources) {
-  return {
+  
   yield write({
       ctx,
       content:"content",
