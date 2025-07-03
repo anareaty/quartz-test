@@ -96,6 +96,16 @@
   margin-left: auto;
 }
 
+@media (max-width: 800px) {
+.page > #quartz-body .center,
+.page > #quartz-body footer {
+  padding: 0 20px;
+  min-width: min(calc(100% - 40px), 900px);
+  max-width: min(calc(100% - 40px), 900px);
+  margin-left: auto;
+  }
+}
+
 
 
 .page-footer {
