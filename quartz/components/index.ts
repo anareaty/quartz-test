@@ -1,4 +1,5 @@
 import Content from "./pages/Content"
+import Feed from "./pages/Feed"
 import TagContent from "./pages/TagContent"
 import FolderContent from "./pages/FolderContent"
 import NotFound from "./pages/404"
@@ -24,10 +25,12 @@ import Comments from "./Comments"
 import Flex from "./Flex"
 import Profile from "./Profile"
 import ConditionalRender from "./ConditionalRender"
+import NavigationLinks from "./NavigationLinks"
 
 export {
   ArticleTitle,
   Content,
+  Feed,
   TagContent,
   FolderContent,
   Darkmode,
@@ -52,4 +55,5 @@ export {
   Flex,
   Profile,
   ConditionalRender,
+  NavigationLinks
 }

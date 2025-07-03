@@ -63,6 +63,7 @@ export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort
   if (limit) {
     list = list.slice(0, limit)
   }
+  
 
   return (
     <ul class="section-ul">

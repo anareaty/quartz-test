@@ -44,8 +44,15 @@
 
 
 .page > #quartz-body .sidebar {
-  padding: 2rem 2rem 2rem;
   gap: 1rem;
+}
+
+.page > #quartz-body .sidebar.left {
+  padding: 1rem 0rem 1rem 2rem;
+}
+
+.page > #quartz-body .sidebar.right {
+  padding: 1rem 2rem 1rem 0rem;
 }
 
 button.search-button {
@@ -69,15 +76,13 @@ button.search-button {
 @media (min-width: 800px) {
 .sidebar.left {
   background-color: var(--lightgray);
-  box-shadow: 1px 5px 4px 0px hsla(0, 0%, 0%, 0.4);
+  box-shadow: 0px 0px 4px 0px #0006;
 }
 }
 
 
 
-.page > #quartz-body .sidebar.right {
-  padding-left: 0;
-}
+
 
 .right.sidebar .toc {
   padding: 20px;
@@ -86,8 +91,11 @@ button.search-button {
   border-radius: 4px;
 }
 
-.sidebar.left > .page-title {
-  margin: 0 auto;
+
+
+.sidebar.left>.page-title {
+    text-align: center;
+    margin-right: 2rem;
 }
 
 @media (min-width: 1200px) {
@@ -201,7 +209,32 @@ ul.tags {
 
 @media (min-width: 800px) {
 div.explorer {
-  margin-top: 1rem;
   border-top: 1px solid var(--fadedgray)
 }
 }
+
+
+
+
+  
+
+
+
+.left.sidebar .flex-component {
+  margin-right: 2rem;
+}
+
+
+
+
+.overflow {
+  scrollbar-color: transparent transparent;
+  
+  
+}
+
+
+.overflow:hover {
+  scrollbar-color: var(--fadedgray) transparent;
+}
+
