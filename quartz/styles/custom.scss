@@ -49,10 +49,10 @@
 }
 
 
-div {
-  background-color: var(--fadedgray) !important;
+.sidebar.left.search > .search-button {
+  background-color: var(--fadedgray);
 }
-/*
+
 .sidebar.left .search {
   background-color: var(--fadedgray);
 }
@@ -60,7 +60,7 @@ div {
 .sidebar.right .search {
   background-color: var(--lightgray);
 }
-*/
+
 
 
 @media (min-width: 800px) {
