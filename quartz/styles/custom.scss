@@ -1,10 +1,12 @@
 @use "./base.scss";
 
+/*
+
 .page {
   max-width: unset;
 }
 
-/*
+
 @media not (min-width: 1200px) {
   .page > #quartz-body {
     padding: 0;
