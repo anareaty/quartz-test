@@ -103,11 +103,12 @@ function _getFolders(slug: FullSlug): SimpleSlug[] {
 export const FeedPage: QuartzEmitterPlugin<Partial<FeedPageOptions>> = (userOpts) => {
 return {
   async *emit(ctx, content, resources) {
+    const slug = joinSegments("feed", "index") as FullSlug
   
   yield write({
       ctx,
       content:"content",
-      slug: "feed",
+      slug,
       ext: ".html",
     })
     }
