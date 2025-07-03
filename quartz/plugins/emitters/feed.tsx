@@ -143,7 +143,7 @@ export const FeedPage: QuartzEmitterPlugin<Partial<FeedPageOptions>> = (userOpts
       )
 
       const folderInfo = computeFolderInfo(folders, content, cfg.locale)
-      yield* processFolderInfo(ctx, folderInfo, allFiles, opts, resources)
+      yield processFolderInfo(ctx, folderInfo, allFiles, opts, resources)
     },
     
   }
