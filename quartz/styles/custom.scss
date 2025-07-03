@@ -48,12 +48,12 @@
   gap: 1rem;
 }
 
-button {
+button.search-button {
   background-color: transparent !important;
 }
 
-.sidebar.left.search > .search-button {
-  background-color: var(--fadedgray) !important;
+.search {
+  border-radius: 4px;
 }
 
 .sidebar.left .search {
