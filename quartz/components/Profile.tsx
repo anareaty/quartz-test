@@ -3,8 +3,8 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 import { classNames } from "../util/lang"
 import Flex from "./Flex"
 
-const Profile: QuartzComponent = () => {
-  return <div class='profile-card'> 
+const Profile: QuartzComponent = ({displayClass}) => {
+  return <div class={classNames(displayClass, "profile-card")}> 
     <img src='static/avatar.jpg' class='avatar-image' alt='avatar-image'/>
     <div class="social-links">
       <a src="">github</a>
@@ -27,3 +27,33 @@ div.social-links {
 `
 
 export default (() => Profile) satisfies QuartzComponentConstructor
+
+
+
+
+
+
+
+
+/*
+export default ((opts?: Partial<Options>) => {
+  const layout = opts?.layout ?? defaultOptions.layout
+  
+  const TableOfContents: QuartzComponent = ({
+    fileData,
+    displayClass,
+    cfg,
+  }: QuartzComponentProps) => {
+    return (
+      <div class={classNames(displayClass, "toc")}>
+      
+      </div>
+    )
+  }
+
+*/
+  
+  
+
+  
+  
