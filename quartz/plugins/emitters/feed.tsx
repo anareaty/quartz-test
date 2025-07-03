@@ -48,7 +48,7 @@ async function* processFolderInfo(
     }
       */
 
-    const content = renderPage(cfg, slug, componentData, opts, externalResources)
+    //const content = renderPage(cfg, slug, componentData, opts, externalResources)
     yield write({
       ctx,
       content:"content",
