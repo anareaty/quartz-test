@@ -158,7 +158,9 @@ ul.tags {
   margin-top: 0.5rem;
 }
 
+@media (min-width: 800px) {
 div.explorer {
   margin-top: 1rem;
   border-top: 1px solid var(--fadedgray)
+}
 }
