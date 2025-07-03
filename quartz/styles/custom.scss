@@ -48,6 +48,9 @@
   gap: 1rem;
 }
 
+button {
+  background-color: var(--fadedgray) !important;
+}
 
 .sidebar.left.search > .search-button {
   background-color: var(--fadedgray) !important;
