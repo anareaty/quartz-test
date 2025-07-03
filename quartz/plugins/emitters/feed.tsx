@@ -101,6 +101,20 @@ function _getFolders(slug: FullSlug): SimpleSlug[] {
 }
 
 export const FeedPage: QuartzEmitterPlugin<Partial<FeedPageOptions>> = (userOpts) => {
+
+  async *emit(ctx, content, resources) {
+  return {
+  yield write({
+      ctx,
+      content:"content",
+      slug: "feed",
+      ext: ".html",
+    })
+    }
+    }
+
+  
+  /*
   const opts: FullPageLayout = {
     ...sharedPageComponents,
     ...defaultListPageLayout,
@@ -147,4 +161,8 @@ export const FeedPage: QuartzEmitterPlugin<Partial<FeedPageOptions>> = (userOpts
     },
     
   }
+
+  */
+
+  
 }
