@@ -25,7 +25,7 @@ export interface Options {
 const defaultOptions: Options = {
   folderDefaultState: "collapsed",
   folderClickBehavior: "link",
-  useSavedState: true,
+  useSavedState: false,
   mapFn: (node) => {
     return node
   },
@@ -64,7 +64,7 @@ export default ((userOpts?: Partial<Options>) => {
       <div
         class={classNames(displayClass, "explorer")}
         data-behavior={opts.folderClickBehavior}
-        data-collapsed='open'
+        data-collapsed={opts.folderDefaultState}
         data-savestate={opts.useSavedState}
         data-data-fns={JSON.stringify({
           order: opts.order,
