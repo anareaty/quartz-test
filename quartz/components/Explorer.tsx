@@ -9,6 +9,7 @@ import { FileTrieNode } from "../util/fileTrie"
 import OverflowListFactory from "./OverflowList"
 import { concatenateResources } from "../util/resources"
 import NavigationLinks from "./NavigationLinks"
+import { FullSlug, resolveRelative } from "../util/path"
 
 type OrderEntries = "sort" | "filter" | "map"
 
