@@ -1,7 +1,7 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
 
 import style from "../styles/listPage.scss"
-import { PageList, SortFn } from "../PageList"
+import { PageContentList, SortFn } from "../PageList"
 import { Root } from "hast"
 import { htmlToJsx } from "../../util/jsx"
 import { i18n } from "../../i18n"
@@ -16,7 +16,7 @@ import { trieFromAllFiles } from "../../util/ctx"
 
 const Feed: QuartzComponent = (props: QuartzComponentProps) => {
   
-  console.log(props.fileData.slug)
+  
 
   let slug = props.fileData.slug!
 
@@ -39,11 +39,11 @@ const Feed: QuartzComponent = (props: QuartzComponentProps) => {
       
     }
   return (<div class='page-listing'>
-    <PageList {...listProps} />
+    <PageContentList {...listProps} />
     </div>)
 }
 
-Feed.css = concatenateResources(style, PageList.css)
+Feed.css = concatenateResources(style, PageContentList.css)
 
 
 export default (() => Feed) satisfies QuartzComponentConstructor
