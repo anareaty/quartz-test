@@ -34,7 +34,11 @@ const Feed: QuartzComponent = (props: QuartzComponentProps) => {
 
   let paginatedFiles = feedFiles.slice(startFile, endFile)
 
-  let pages = Math.ceil(feedFiles.length / entriesOnPage)
+  let pagesNum = Math.ceil(feedFiles.length / entriesOnPage)
+  let pages = []
+  for (let p = 1; p <= pages; p++) {
+    pages.push(p)
+  }
 
 
   const listProps = {
@@ -47,9 +51,9 @@ const Feed: QuartzComponent = (props: QuartzComponentProps) => {
 
     <ul class='pagination-block'>
       {
-        for (let p = 1; p <= pages; p++) {
-          <li>p</li>
-        }
+        pages.map((p) => {
+          return (<li>p</li>)
+        })
       }
     </ul>
     </div>)
