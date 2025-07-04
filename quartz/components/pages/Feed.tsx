@@ -52,7 +52,7 @@ const Feed: QuartzComponent = (props: QuartzComponentProps) => {
     <ul class='pagination-block'>
       {pages.map((p) => {(
         <li>{p}</li>
-      ))}
+      )})}
 
 
 
