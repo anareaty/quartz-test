@@ -130,7 +130,14 @@ export default ((userOpts?: Partial<Options>) => {
         
         <div class="explorer-content" aria-expanded={false}>
 
-          {NavigationLinks()}
+          
+  
+        <li class='nav-link'>
+          <a href="ggg">
+            Лента
+          </a>
+        </li>
+  
           
           <OverflowList class="explorer-ul" />
 
