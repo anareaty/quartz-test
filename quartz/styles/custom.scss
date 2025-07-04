@@ -252,3 +252,14 @@ div.explorer {
   scrollbar-color: var(--fadedgray) transparent;
 }
 
+.popover, .popover:hover, .active-popover {
+  animation: none;
+  will-change: unset;
+  transition-delay: 0.3s;
+}
+
+.popover:hover, .active-popover {
+  visibility: visible;
+  opacity: 1;
+}
+
