@@ -38,8 +38,7 @@ const Feed: QuartzComponent = (props: QuartzComponentProps) => {
       allFiles: paginatedFiles
       
     }
-  return (<div>
-    <div>{num}</div>
+  return (<div class='page-listing'>
     <PageList {...listProps} />
     </div>)
 }
