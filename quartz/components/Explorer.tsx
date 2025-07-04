@@ -99,7 +99,7 @@ export default ((userOpts?: Partial<Options>) => {
           </svg>
         </button>
 
-        {NavigationLinks()}
+        <NavigationLinks>
         
         
         {/*
