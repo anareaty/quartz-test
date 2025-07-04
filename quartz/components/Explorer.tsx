@@ -133,7 +133,7 @@ export default ((userOpts?: Partial<Options>) => {
           
           <OverflowList class="explorer-ul" />
 
-          {NavigationLinks()}
+          
 
           
         </div>
@@ -145,6 +145,8 @@ export default ((userOpts?: Partial<Options>) => {
         <template id="template-folder">
           <li>
             <div class="folder-container">
+
+              <NavigationLinks/>
               
               <div>
                 <button class="folder-button">
