@@ -2,10 +2,12 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { classNames } from "../util/lang"
 import Flex from "./Flex"
+import { FullSlug, resolveRelative } from "../util/path"
 
-const Profile: QuartzComponent = ({displayClass}) => {
+const Profile: QuartzComponent = ({displayClass, fileData}) => {
+  const imageLinkDest = resolveRelative(fileData.slug!, '/static/avatar.jpg' as FullSlug)
   return <div class={classNames(displayClass, "profile-card")}> 
-    <img src='/static/avatar.jpg' class='avatar-image' alt='avatar-image'/>
+    <img src={imageLinkDest} class='avatar-image' alt='avatar-image'/>
     <div class="social-links">
       <a src="">github</a>
       <a src="">mastodon</a>
