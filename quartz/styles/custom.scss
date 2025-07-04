@@ -267,3 +267,16 @@ div.explorer {
   visibility: visible;
 }
 
+
+
+details.more > summary {
+  display: block;
+}
+
+details.more > summary::-webkit-details-marker { 
+  display: none 
+}
+
+details.more[open] > summary {
+  display: none;
+}
