@@ -36,7 +36,7 @@ const Feed: QuartzComponent = (props: QuartzComponentProps) => {
 
   let pagesNum = Math.ceil(feedFiles.length / entriesOnPage)
   let pages = []
-  for (let p = 1; p <= pages; p++) {
+  for (let p = 1; p <= pagesNum; p++) {
     pages.push(p)
   }
 
