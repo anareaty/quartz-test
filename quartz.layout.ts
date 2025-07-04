@@ -39,7 +39,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.NavigationLinks(),
+    
     Component.Explorer(),
   ],
   right: [
@@ -80,7 +80,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.NavigationLinks(),
+    
     Component.Explorer(),
   ],
   right: [],
