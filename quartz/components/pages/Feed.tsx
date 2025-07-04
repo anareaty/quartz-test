@@ -50,11 +50,16 @@ const Feed: QuartzComponent = (props: QuartzComponentProps) => {
     <PageContentList {...listProps} />
 
     <ul class='pagination-block'>
-      {
-        pages.map((p) => {
-          return (<li>p</li>)
-        })
-      }
+      {pages.map((p) => {(
+        <li>{p}</li>
+      ))}
+
+
+
+      
+
+
+      
     </ul>
     </div>)
 }
