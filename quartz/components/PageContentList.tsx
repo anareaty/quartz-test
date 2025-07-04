@@ -49,7 +49,7 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
                 ))}
               </ul>
             </div>
-            <div>{JSON.srtingify(page)}</div>
+            <div>{JSON.stringify(page)}</div>
             <div>test</div>
             
           </li>
