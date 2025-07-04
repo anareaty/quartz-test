@@ -17,14 +17,15 @@ import { trieFromAllFiles } from "../../util/ctx"
 
 const Feed: QuartzComponent = (props: QuartzComponentProps) => {
   
-  
+  let entriesOnPage = 10
 
+  
   let slug = props.fileData.slug!
 
   let num = Number(slug.split("/")[1])
 
-  let startFile = (num - 1) * 10
-  let endFile = num * 10 
+  let startFile = (num - 1) * entriesOnPage
+  let endFile = num * entriesOnPage
 
 
 
@@ -32,6 +33,8 @@ const Feed: QuartzComponent = (props: QuartzComponentProps) => {
   let feedFiles = props.allFiles.filter(file => file.frontmatter && file.frontmatter.feed)
 
   let paginatedFiles = feedFiles.slice(startFile, endFile)
+
+  let pages = Math.ceil(feedFiles.length / entriesOnPage)
 
 
   const listProps = {
@@ -41,6 +44,14 @@ const Feed: QuartzComponent = (props: QuartzComponentProps) => {
     }
   return (<div class='page-listing'>
     <PageContentList {...listProps} />
+
+    <ul class='pagination-block'>
+      {
+        for (let p = 1; p <= pages; p++) {
+          <li>p</li>
+        }
+      }
+    </ul>
     </div>)
 }
 
