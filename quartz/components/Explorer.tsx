@@ -8,7 +8,7 @@ import { i18n } from "../i18n"
 import { FileTrieNode } from "../util/fileTrie"
 import OverflowListFactory from "./OverflowList"
 import { concatenateResources } from "../util/resources"
-import { NavigationLinks } from "./NavigationLinks"
+import NavigationLinks from "./NavigationLinks"
 
 type OrderEntries = "sort" | "filter" | "map"
 
