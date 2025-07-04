@@ -49,9 +49,9 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
                 ))}
               </ul>
             </div>
-            <div>{content}</div>
+            <div>{JSON.srtingify(page)}</div>
             <div>test</div>
-            <div>{page.fileData?.content}</div>
+            
           </li>
         )
       })}
