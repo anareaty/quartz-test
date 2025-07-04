@@ -8,6 +8,7 @@ import { i18n } from "../i18n"
 import { FileTrieNode } from "../util/fileTrie"
 import OverflowListFactory from "./OverflowList"
 import { concatenateResources } from "../util/resources"
+import { NavigationLinks } from "./NavigationLinks"
 
 type OrderEntries = "sort" | "filter" | "map"
 
@@ -97,6 +98,8 @@ export default ((userOpts?: Partial<Options>) => {
             <line x1="4" x2="20" y1="18" y2="18" />
           </svg>
         </button>
+
+        {NavigationLinks()}
         
         
         {/*
