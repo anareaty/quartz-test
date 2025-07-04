@@ -62,11 +62,11 @@ export default ((userOpts?: Partial<Options>) => {
   const { OverflowList, overflowListAfterDOMLoaded } = OverflowListFactory()
   const navLinks = [
     {
-      link: "feed/1",
+      link: "feed/1/",
       name: "Лента"
     },
     {
-      link: "tags",
+      link: "tags/",
       name: "Теги"
     }
   ]
