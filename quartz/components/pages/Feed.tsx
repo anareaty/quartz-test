@@ -10,7 +10,7 @@ import { QuartzPluginData } from "../../plugins/vfile"
 import { ComponentChildren } from "preact"
 import { concatenateResources } from "../../util/resources"
 import { trieFromAllFiles } from "../../util/ctx"
-import { FullSlug, isFolderPath, resolveRelative } from "../util/path"
+import { FullSlug, isFolderPath, resolveRelative } from "../../util/path"
 
 
 
