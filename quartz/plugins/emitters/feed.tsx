@@ -15,7 +15,7 @@ import {
   simplifySlug,
 } from "../../util/path"
 import { defaultListPageLayout, sharedPageComponents } from "../../../quartz.layout"
-import { FolderContent } from "../../components"
+import { Feed } from "../../components"
 import { write } from "./helpers"
 import { i18n, TRANSLATIONS } from "../../i18n"
 import { BuildCtx } from "../../util/ctx"
@@ -24,6 +24,9 @@ interface FeedPageOptions extends FullPageLayout {
   sort?: (f1: QuartzPluginData, f2: QuartzPluginData) => number
 }
 
+
+/*
+
 async function* processFolderInfo(
   ctx: BuildCtx,
   folderInfo: Record<SimpleSlug, ProcessedContent>,
@@ -31,12 +34,14 @@ async function* processFolderInfo(
   opts: FullPageLayout,
   resources: StaticResources,
 ) {
-
-    const slug = joinSegments("feed", "index") as FullSlug
-    //const [tree, file] = folderContent
+  for (const [folder, folderContent] of Object.entries(folderInfo) as [
+    SimpleSlug,
+    ProcessedContent,
+  ][]) {
+    const slug = joinSegments(folder, "index") as FullSlug
+    const [tree, file] = folderContent
     const cfg = ctx.cfg.configuration
     const externalResources = pageResources(pathToRoot(slug), resources)
-    /*
     const componentData: QuartzComponentProps = {
       ctx,
       fileData: file.data,
@@ -46,17 +51,15 @@ async function* processFolderInfo(
       tree,
       allFiles,
     }
-      */
 
-    //const content = renderPage(cfg, slug, componentData, opts, externalResources)
+    const content = renderPage(cfg, slug, componentData, opts, externalResources)
     yield write({
       ctx,
-      content:"content",
+      content,
       slug,
       ext: ".html",
     })
-
-   
+  }
 }
 
 function computeFolderInfo(
@@ -89,6 +92,8 @@ function computeFolderInfo(
   return folderInfo
 }
 
+*/
+
 function _getFolders(slug: FullSlug): SimpleSlug[] {
   var folderName = path.dirname(slug ?? "") as SimpleSlug
   const parentFolderNames = [folderName]
@@ -101,25 +106,10 @@ function _getFolders(slug: FullSlug): SimpleSlug[] {
 }
 
 export const FeedPage: QuartzEmitterPlugin<Partial<FeedPageOptions>> = (userOpts) => {
-return {
-  async *emit(ctx, content, resources) {
-    const slug = joinSegments("feed", "index") as FullSlug
-  
-  yield write({
-      ctx,
-      content:"content",
-      slug,
-      ext: ".html",
-    })
-    }
-    }
-
-  
-  /*
   const opts: FullPageLayout = {
     ...sharedPageComponents,
     ...defaultListPageLayout,
-    pageBody: FolderContent({ sort: userOpts?.sort }),
+    pageBody: Feed(),
     ...userOpts,
   }
 
@@ -144,6 +134,45 @@ return {
       ]
     },
     async *emit(ctx, content, resources) {
+
+      
+
+
+    for (let num = 1; num < 10; num++) {
+      let slug = joinSegments("feed", num.toString(), "index") as FullSlug
+
+      const cfg = ctx.cfg.configuration
+      const externalResources = pageResources(pathToRoot(slug), resources)
+      const allFiles = content.map((c) => c[1].data)
+
+      const [tree, file] = defaultProcessedContent({
+        slug,
+        frontmatter: { title: "Feed title " + num},
+      })
+      
+
+      const componentData: QuartzComponentProps = {
+      ctx,
+      fileData: file.data,
+      externalResources,
+      cfg,
+      children: [],
+      tree,
+      allFiles,
+    }
+
+
+      const rendered = renderPage(cfg, slug, componentData, opts, externalResources)
+
+      yield write({
+      ctx,
+      content: rendered,
+      slug,
+      ext: ".html",
+    })
+    }
+
+      /*
       const allFiles = content.map((c) => c[1].data)
       const cfg = ctx.cfg.configuration
 
@@ -158,12 +187,9 @@ return {
       )
 
       const folderInfo = computeFolderInfo(folders, content, cfg.locale)
-      yield processFolderInfo(ctx, folderInfo, allFiles, opts, resources)
+      yield* processFolderInfo(ctx, folderInfo, allFiles, opts, resources)
+
+      */
     },
-    
   }
-
-  */
-
-  
 }

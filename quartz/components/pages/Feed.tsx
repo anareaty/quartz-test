@@ -15,14 +15,33 @@ import { trieFromAllFiles } from "../../util/ctx"
 
 
 const Feed: QuartzComponent = (props: QuartzComponentProps) => {
+  
+  console.log(props.fileData.slug)
+
+  let slug = props.fileData.slug!
+
+  let num = Number(slug.split("/")[1])
+
+  let startFile = (num - 1) * 10
+  let endFile = num * 10 
+
+
+
+
   let feedFiles = props.allFiles.filter(file => file.frontmatter && file.frontmatter.feed)
+
+  let paginatedFiles = feedFiles.slice(startFile, endFile)
+
+
   const listProps = {
       ...props,
-      limit: 10,
-      allFiles: feedFiles
+      allFiles: paginatedFiles
       
     }
-  return (<PageList {...listProps} />)
+  return (<div>
+    <div>{num}</div>
+    <PageList {...listProps} />
+    </div>)
 }
 
 Feed.css = concatenateResources(style, PageList.css)
