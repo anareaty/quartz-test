@@ -99,7 +99,7 @@ export default ((userOpts?: Partial<Options>) => {
           </svg>
         </button>
 
-        <NavigationLinks/>
+        
         
         
         {/*
@@ -129,7 +129,13 @@ export default ((userOpts?: Partial<Options>) => {
         */}
         
         <div class="explorer-content" aria-expanded={false}>
+          
+          
           <OverflowList class="explorer-ul" />
+
+          <NavigationLinks/>
+
+          
         </div>
         <template id="template-file">
           <li>
