@@ -254,12 +254,12 @@ div.explorer {
 
 .popover, .popover:hover, .active-popover {
   animation: none;
-  will-change: unset;
-  transition-delay: 0.3s;
+  opacity: 1;
+  transition: visibility;
+  transition-delay: 0.5s;
 }
 
 .popover:hover, .active-popover {
   visibility: visible;
-  opacity: 1;
 }
 
