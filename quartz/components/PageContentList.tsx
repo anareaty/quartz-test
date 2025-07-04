@@ -30,7 +30,7 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
 
         return (
           
-          <li class="section-li">
+          <li class="section-li feed-section">
             {/*
             <div class="section">
               <p class="meta">
@@ -95,7 +95,7 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
             <article class='popover-hint'>{content}</article>
 
             <p><a href={resolveRelative(fileData.slug!, page.slug!)} class="internal">
-                   "Оставить комментарий"
+                   Оставить комментарий
                   </a></p>
 
             <hr/>
