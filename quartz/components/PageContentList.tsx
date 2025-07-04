@@ -4,7 +4,8 @@ import { Date, getDate } from "./Date"
 import { QuartzComponent, QuartzComponentProps } from "./types"
 import { GlobalConfiguration } from "../cfg"
 import { SortFn, byDateAndAlphabetical, byDateAndAlphabeticalFolderFirst, Props } from "./PageList"
-import Content from "./pages/Content"
+import { htmlToJsx } from "../util/jsx"
+
 
 
 
@@ -21,7 +22,9 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
       {list.map((page) => {
         const title = page.frontmatter?.title
         const tags = page.frontmatter?.tags ?? []
-        const content = page.content
+        const tree = page.htmlAst
+        const filePath = page.filePath
+        const content = htmlToJsx(filePath!, tree) as ComponentChildren
 
         return (
           <li class="section-li">
@@ -49,8 +52,7 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
                 ))}
               </ul>
             </div>
-            <div>{JSON.stringify(page)}</div>
-            <div>test</div>
+            <article>{content}</article>
             
           </li>
         )
