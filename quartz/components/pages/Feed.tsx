@@ -40,7 +40,7 @@ const Feed: QuartzComponent = (props: QuartzComponentProps) => {
     pages.push(p)
   }
 
-  pages = ["1","2","3"]
+ // pages = ["1","2","3"]
 
 
   const listProps = {
@@ -53,7 +53,7 @@ const Feed: QuartzComponent = (props: QuartzComponentProps) => {
 
     <ul class='pagination-block'>
       {pages.map((p) => (
-        <li>ggg</li>
+        <li>{p}</li>
       ))}
 
 
