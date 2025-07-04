@@ -50,7 +50,7 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
               </ul>
             </div>
             <div>test</div>
-            <Content/>
+            {Content(page.fileData, page.tree)}
           </li>
         )
       })}
