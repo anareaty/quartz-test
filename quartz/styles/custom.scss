@@ -223,6 +223,10 @@ div.explorer {
   }
 }
 
+.popover .section {
+  grid-template-columns: auto !important;
+}
+
 .page-listing li.section-li > .section > .meta {
   display: none;
 }
