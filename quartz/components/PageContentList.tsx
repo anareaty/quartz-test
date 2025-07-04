@@ -94,6 +94,12 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
             </div>
             <article class='popover-hint'>{content}</article>
 
+            <p><a href={resolveRelative(fileData.slug!, page.slug!)} class="internal">
+                   "Оставить комментарий"
+                  </a></p>
+
+            <hr/>
+
 
 
 
