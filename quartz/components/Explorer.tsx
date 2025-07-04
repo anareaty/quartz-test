@@ -133,7 +133,7 @@ export default ((userOpts?: Partial<Options>) => {
           
           <OverflowList class="explorer-ul" />
 
-          <NavigationLinks/>
+          {NavigationLinks()}
 
           
         </div>
