@@ -60,7 +60,16 @@ export type FolderState = {
 export default ((userOpts?: Partial<Options>) => {
   const opts: Options = { ...defaultOptions, ...userOpts }
   const { OverflowList, overflowListAfterDOMLoaded } = OverflowListFactory()
-  const navLinks = ["lilk", "link2"]
+  const navLinks = [
+    {
+      link: "feed/1",
+      name: "Лента"
+    },
+    {
+      link: "tags",
+      name: "Теги"
+    }
+  ]
 
   const Explorer: QuartzComponent = ({ cfg, displayClass, fileData }: QuartzComponentProps) => {
     return (
@@ -108,19 +117,19 @@ export default ((userOpts?: Partial<Options>) => {
         
         <div class="explorer-content" aria-expanded={false}>
 
-          
+        <ul class='nav-links'>
         {
-          
-          navLinks.map((link) => {
-          const linkDest = resolveRelative(fileData.slug!, link as FullSlug)
+          navLinks.map((linkData) => {
+          const linkDest = resolveRelative(fileData.slug!, linkData.link as FullSlug)
           return (
             <li>
               <a href={linkDest} class="nav-link">
-                {link}
+                {linkData.name}
               </a>
             </li>
           )
         })}
+          </ul>
         
   
           
