@@ -10,6 +10,7 @@ import { QuartzPluginData } from "../../plugins/vfile"
 import { ComponentChildren } from "preact"
 import { concatenateResources } from "../../util/resources"
 import { trieFromAllFiles } from "../../util/ctx"
+import { FullSlug, isFolderPath, resolveRelative } from "../util/path"
 
 
 
@@ -24,6 +25,7 @@ const Feed: QuartzComponent = (props: QuartzComponentProps) => {
 
   let num = Number(slug.split("/")[1])
 
+  
   let startFile = (num - 1) * entriesOnPage
   let endFile = num * entriesOnPage
 
@@ -37,7 +39,8 @@ const Feed: QuartzComponent = (props: QuartzComponentProps) => {
   let pagesNum = Math.ceil(feedFiles.length / entriesOnPage)
   let pages = []
   for (let p = 1; p <= pagesNum; p++) {
-    pages.push(p)
+    let pagePath = resolveRelative(slug, `feed/` + p + '/' as FullSlug)
+    pages.push({pagePath, text: p})
   }
 
  // pages = ["1","2","3"]
@@ -53,7 +56,9 @@ const Feed: QuartzComponent = (props: QuartzComponentProps) => {
 
     <ul class='pagination-block'>
       {pages.map((p) => (
-        <li>{p}</li>
+        <li>
+          <a href={p.pagePath}>{p.text}</a>
+        </li>
       ))}
 
 
