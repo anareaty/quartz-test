@@ -26,8 +26,12 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
         const filePath = page.filePath
         const content = htmlToJsx(filePath!, tree) as ComponentChildren
 
+        
+
         return (
+          
           <li class="section-li">
+            {/*
             <div class="section">
               <p class="meta">
                 {page.dates && <Date date={getDate(cfg, page)!} locale={cfg.locale} />}
@@ -52,7 +56,81 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
                 ))}
               </ul>
             </div>
-            <article>{content}</article>
+            */}
+
+            
+            <div class='page-header'>
+              <div class='popover-hint'>
+
+
+                <h2>
+                  <a href={resolveRelative(fileData.slug!, page.slug!)} class="internal">
+                    {title}
+                  </a>
+                </h2>
+
+
+
+                <p class="meta">
+                {page.dates && <Date date={getDate(cfg, page)!} locale={cfg.locale} />}
+              </p>
+
+
+                <ul class="tags">
+                {tags.map((tag) => (
+                  <li>
+                    <a
+                      class="internal tag-link"
+                      href={resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)}
+                    >
+                      {tag}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+                
+              
+            </div>
+            </div>
+            <article class='popover-hint'>{content}</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+    
+      
+
+      
+
+      
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
             
           </li>
         )
