@@ -40,6 +40,8 @@ const Feed: QuartzComponent = (props: QuartzComponentProps) => {
     pages.push(p)
   }
 
+  pages = ["1","2","3"]
+
 
   const listProps = {
       ...props,
