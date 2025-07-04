@@ -129,9 +129,12 @@ export default ((userOpts?: Partial<Options>) => {
         */}
         
         <div class="explorer-content" aria-expanded={false}>
-          
+
+          <NavigationLinks/>
           
           <OverflowList class="explorer-ul" />
+
+          
 
           
 
@@ -146,7 +149,7 @@ export default ((userOpts?: Partial<Options>) => {
           <li>
             <div class="folder-container">
 
-              <NavigationLinks/>
+              
               
               <div>
                 <button class="folder-button">
