@@ -4,6 +4,7 @@ import { Date, getDate } from "./Date"
 import { QuartzComponent, QuartzComponentProps } from "./types"
 import { GlobalConfiguration } from "../cfg"
 import { SortFn, byDateAndAlphabetical, byDateAndAlphabeticalFolderFirst, Props } from "./PageList"
+import Content from "./pages/Content"
 
 
 
@@ -20,6 +21,7 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
       {list.map((page) => {
         const title = page.frontmatter?.title
         const tags = page.frontmatter?.tags ?? []
+        const content = page.content
 
         return (
           <li class="section-li">
@@ -47,6 +49,8 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
                 ))}
               </ul>
             </div>
+            <div>test</div>
+            <Content/>
           </li>
         )
       })}
