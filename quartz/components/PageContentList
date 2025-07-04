@@ -3,13 +3,7 @@ import { QuartzPluginData } from "../plugins/vfile"
 import { Date, getDate } from "./Date"
 import { QuartzComponent, QuartzComponentProps } from "./types"
 import { GlobalConfiguration } from "../cfg"
-import { SortFn, byDateAndAlphabetical, byDateAndAlphabeticalFolderFirst } from "./PageList"
-
-
-type Props = {
-  limit?: number
-  sort?: SortFn
-} & QuartzComponentProps
+import { SortFn, byDateAndAlphabetical, byDateAndAlphabeticalFolderFirst, Props } from "./PageList"
 
 
 
