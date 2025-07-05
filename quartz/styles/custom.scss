@@ -271,6 +271,7 @@ div.explorer {
 
 details.more > summary {
   display: block;
+  color: var(--gray);
 }
 
 details.more > summary::-webkit-details-marker { 
@@ -279,4 +280,24 @@ details.more > summary::-webkit-details-marker {
 
 details.more[open] > summary {
   display: none;
+}
+
+
+
+a.internal {
+    background-color: transparent;
+}
+
+
+ul.pagination-block {
+  display: flex;
+}
+
+ul.pagination-block li{
+  display: block;
+  margin: 0 5px;
+}
+
+ul.pagination-block li > *{
+  white-space: nowrap;
 }

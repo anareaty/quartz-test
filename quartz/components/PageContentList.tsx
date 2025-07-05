@@ -32,68 +32,51 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
         const tree = page.htmlAst
         const filePath = page.filePath
 
+        let contentBefore, contentAfter : ComponentChildren = null
 
-        console.log(tree)
+        let items = [...tree.children]
+        let firstLineStart = items[0].position.start.line
+        let lastItemsEnd = items[items.length - 1].position.end.line
+        let maxLines = firstLineStart + 20
 
+        if (lastItemsEnd > maxLines) {
 
-        let childrenBefore = []
-        let childrenAfter = []
-
-        let breakNum = 0
-
-        let lastEndLine = 0
-
-        let children = tree.children 
-        for (let i = 0; i < children.length; i++) {
-          let item = children[i]
-          if (i == 0 || !item.position || item.position.end.line < 30) {
-            childrenBefore.push(item)
           
 
-          } else {
-            breakNum = i
-            break
+          let firstItems = []
+          let loopBreak = false
+
+          while (!loopBreak) {
+            let firstItem = items.shift()
+            firstItems.push(firstItem)
+            if (firstItem.tagName && 
+              !firstItem.tagName.startsWith("h") && 
+              firstItem.tagName != "figure") {
+              loopBreak = true
+            }
           }
+
+
+          let treeBefore = {
+              type: tree.type,
+              children: firstItems
+            }
+          contentBefore = htmlToJsx(filePath!, treeBefore)
+
+          if (items.length > 0) {
+            let treeAfter = {
+              type: tree.type,
+              children: items
+            }
+            contentAfter = htmlToJsx(filePath!, treeAfter)
+          }
+        } else {
+
+          contentBefore = htmlToJsx(filePath!, tree)
         }
-
-        for (let i = breakNum; i < children.length; i++) {
-          let item = children[i]
-          childrenAfter.push(item)
-          if (item.position) {
-            lastEndLine = item.position.end.line
-          }
-          
-        }
-
-        let treeBefore = {
-            type: tree.type,
-            children: childrenBefore
-          }
-        treeBefore.children = childrenBefore
-        let jsxBefore = htmlToJsx(filePath!, treeBefore) as ComponentChildren
-
-        let jsxAfter: ComponentChildren = null
-
-        if (childrenAfter.length > 0) {
-          let treeAfter = {
-            type: tree.type,
-            children: childrenAfter
-          }
-          treeAfter.children = childrenAfter
-          jsxAfter = htmlToJsx(filePath!, treeAfter) as ComponentChildren
-        }
-
 
         
-
-
-
-        //const content = htmlToJsx(filePath!, tree) as ComponentChildren
-
-        
-
         return (
-          
           <li class="section-li feed-section">
            
             <div class='page-header'>
@@ -111,7 +94,7 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
 
 
                 <ul class="tags">
-                {tags.map((tag) => (
+                {tags.map((tag: any) => (
                   <li>
                     <a
                       class="internal tag-link"
@@ -127,11 +110,11 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
             </div>
             </div>
             <article class='popover-hint'>
-              {jsxBefore}
-              {(childrenAfter.length > 0 && lastEndLine > 60) ? <details class='more'>
+              {contentBefore}
+              {contentAfter ? <details class='more'>
                 <summary class='internal'>Читать дальше...</summary>
-                {jsxAfter}
-              </details> : jsxAfter }
+                {contentAfter}
+              </details> : null }
             </article>
 
             <p><a href={resolveRelative(fileData.slug!, page.slug!)} class="internal">

@@ -69,7 +69,8 @@ export interface GlobalConfiguration {
    * Language Codes: https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes
    * Region Codes: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
    */
-  locale: ValidLocale
+  locale: ValidLocale,
+  entriesOnFeedPage: number
 }
 
 export interface QuartzConfig {

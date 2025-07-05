@@ -6,6 +6,11 @@ import * as Plugin from "./quartz/plugins"
  *
  * See https://quartz.jzhao.xyz/configuration for more information.
  */
+
+
+
+
+
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "Paperless forest",
@@ -19,6 +24,7 @@ const config: QuartzConfig = {
     baseUrl: "anareaty.github.io/quartz-test",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
+    entriesOnFeedPage: 5,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
