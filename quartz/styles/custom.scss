@@ -244,16 +244,24 @@ div.explorer {
 }
 
 
+@media (max-width: 800px) {
+  .explorer,
+  .explorer .folder-container div>a {
+    font-size: 1.1rem;
+  }
+}
 
 
-.overflow {
+
+
+* {
   scrollbar-color: transparent transparent;
   
   
 }
 
 
-.overflow:hover {
+*:hover {
   scrollbar-color: var(--fadedgray) transparent;
 }
 
@@ -303,4 +311,20 @@ ul.pagination-block li{
 
 ul.pagination-block li > *{
   white-space: nowrap;
+}
+
+
+
+.explorer-content {
+  overflow-y: scroll !important;
+}
+
+.explorer-ul {
+  overflow-y: hidden !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+}
+
+.explorer, .explorer-content {
+  height: 100%;
 }

@@ -117,6 +117,7 @@ export default ((userOpts?: Partial<Options>) => {
         
         <div class="explorer-content" aria-expanded={false}>
 
+        
         <ul class='nav-links'>
         {
           navLinks.map((linkData) => {
@@ -130,7 +131,6 @@ export default ((userOpts?: Partial<Options>) => {
           )
         })}
           </ul>
-        
   
           
           <OverflowList class="explorer-ul" />
