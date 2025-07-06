@@ -1,8 +1,13 @@
+
+
 @use "sass:map";
 
 @use "./variables.scss" as *;
 @use "./syntax.scss";
 @use "./callouts.scss";
+
+
+
 
 html {
   scroll-behavior: smooth;
@@ -11,6 +16,9 @@ html {
   width: 100vw;
 }
 
+
+
+
 body {
   margin: 0;
   box-sizing: border-box;
@@ -18,6 +26,8 @@ body {
   font-family: var(--bodyFont);
   color: var(--darkgray);
 }
+
+
 
 .text-highlight {
   background-color: var(--textHighlight);
@@ -28,6 +38,8 @@ body {
   background: color-mix(in srgb, var(--tertiary) 60%, rgba(255, 255, 255, 0));
   color: var(--darkgray);
 }
+
+
 
 p,
 ul,
@@ -55,7 +67,10 @@ ul,
 .katex,
 .math {
   overflow-wrap: anywhere;
-  /* tr and td removed from list of selectors for overflow-wrap, allowing them to use default 'normal' property value */
+
+  
+
+  
 }
 
 .math {
@@ -423,6 +438,8 @@ h6 {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
+
+
 
 figure[data-rehype-pretty-code-figure] {
   margin: 0;
