@@ -326,11 +326,15 @@ ul.pagination-block li > *{
 }
 
 .explorer-ul {
-  overflow-y: hidden !important;
+  overflow-y: visible !important;
   mask-image: none !important;
   -webkit-mask-image: none !important;
 }
 
 .explorer, .explorer-content {
   height: 100%;
+}
+
+.explorer li {
+    line-height: 1.7rem;
 }
