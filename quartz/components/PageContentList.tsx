@@ -83,9 +83,9 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
               <div class='popover-hint'>
 
                 <h2>
-                  <a href={resolveRelative(fileData.slug!, page.slug!)} class="internal">
+                  
                     {title}
-                  </a>
+                  
                 </h2>
 
                 <p class="meta">

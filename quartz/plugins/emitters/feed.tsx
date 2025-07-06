@@ -70,7 +70,7 @@ export const FeedPage: QuartzEmitterPlugin<Partial<FeedPageOptions>> = (userOpts
   
       const [tree, file] = defaultProcessedContent({
         slug,
-        frontmatter: { title: "Feed title " + num},
+        frontmatter: { title: "Лента"},
       })
       
 
