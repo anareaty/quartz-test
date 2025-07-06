@@ -24,7 +24,7 @@ const config: QuartzConfig = {
     baseUrl: "anareaty.github.io/quartz-test",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
-    entriesOnFeedPage: 5,
+    entriesOnFeedPage: 2,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
