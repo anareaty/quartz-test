@@ -56,11 +56,10 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     
     Component.DesktopOnly(Component.TableOfContents()),
+    Component.Graph(),
   ],
   afterBody: [
-    Component.Feed(),
     Component.Backlinks(),
-    Component.Graph(),
   ]
 }
 
@@ -83,5 +82,16 @@ export const defaultListPageLayout: PageLayout = {
     
     Component.Explorer(),
   ],
-  right: [],
+  right: [
+    Component.Flex({
+      components: [
+        {
+          Component: Component.Search(),
+          grow: true,
+        },
+        { Component: Component.Darkmode() },
+        { Component: Component.ReaderMode() },
+      ],
+    }),
+  ],
 }

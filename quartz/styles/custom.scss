@@ -272,22 +272,29 @@ div.explorer {
   scrollbar-color: var(--fadedgray) transparent;
 }
 
+/*
+
 .popover, .popover:hover, .active-popover {
   animation: none;
   opacity: 1;
-  transition: visibility;
+  transition: visibility 0.5s;
   transition-delay: 0.5s;
 }
 
 .popover:hover, .active-popover {
   visibility: visible;
+  transition: visibility 0.5s;
+  transition-delay: 0.5s;
 }
+
+*/
 
 
 
 details.more > summary {
   display: block;
   color: var(--gray);
+  cursor: pointer;
 }
 
 details.more > summary::-webkit-details-marker { 
@@ -359,3 +366,10 @@ ul.pagination-block li > *{
     opacity: 0;
   }
 }
+
+
+.explorer.collapsed {
+    flex: 0 auto;
+}
+
+

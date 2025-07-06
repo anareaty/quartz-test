@@ -16,7 +16,7 @@ const config: QuartzConfig = {
     pageTitle: "Paperless forest",
     pageTitleSuffix: "Сайт про всякие штуки",
     enableSPA: true,
-    enablePopovers: true,
+    enablePopovers: false,
     analytics: {
       provider: "plausible",
     },
@@ -24,7 +24,7 @@ const config: QuartzConfig = {
     baseUrl: "anareaty.github.io/quartz-test",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
-    entriesOnFeedPage: 2,
+    entriesOnFeedPage: 5,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
