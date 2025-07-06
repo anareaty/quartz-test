@@ -237,9 +237,10 @@ div.explorer {
   
 
 
-
+@media not (max-width: 800px) {
 .left.sidebar .flex-component {
   margin-right: 2rem;
+}
 }
 
 
