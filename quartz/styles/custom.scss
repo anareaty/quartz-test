@@ -291,6 +291,8 @@ a.internal {
 
 ul.pagination-block {
   display: flex;
+  justify-content: center;
+  padding: 0;
 }
 
 ul.pagination-block li{
