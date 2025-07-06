@@ -241,6 +241,8 @@ div.explorer {
 .left.sidebar .flex-component {
   margin-right: 2rem;
 }
+
+
 }
 
 
@@ -249,6 +251,10 @@ div.explorer {
   .explorer .folder-container div>a {
     font-size: 1.1rem;
   }
+
+  .sidebar.left>.page-title {
+    margin: 0 0.5rem;
+}
 }
 
 
