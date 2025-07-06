@@ -16,7 +16,7 @@ const config: QuartzConfig = {
     pageTitle: "Paperless forest",
     pageTitleSuffix: "Сайт про всякие штуки",
     enableSPA: true,
-    enablePopovers: false,
+    enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
