@@ -31,62 +31,25 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
         const tags = page.frontmatter?.tags ?? []
         const tree = page.htmlAst
         const filePath = page.filePath
-
-        let contentBefore, contentAfter : ComponentChildren = null
-
-        let items = [...tree.children]
-        let firstLineStart = items[0].position.start.line
-        let lastItemsEnd = items[items.length - 1].position.end.line
-        let maxLines = firstLineStart + 20
-
-        if (lastItemsEnd > maxLines) {
-
-          
-
-          let firstItems = []
-          let loopBreak = false
-
-          while (!loopBreak) {
-            let firstItem = items.shift()
-            firstItems.push(firstItem)
-            if (firstItem.tagName && 
-              !firstItem.tagName.startsWith("h") && 
-              firstItem.tagName != "figure") {
-              loopBreak = true
-            }
-          }
-
-
-          let treeBefore = {
-              type: tree.type,
-              children: firstItems
-            }
-          contentBefore = htmlToJsx(filePath!, treeBefore)
-
-          if (items.length > 0) {
-            let treeAfter = {
-              type: tree.type,
-              children: items
-            }
-            contentAfter = htmlToJsx(filePath!, treeAfter)
-          }
-        } else {
-
-          contentBefore = htmlToJsx(filePath!, tree)
-        }
+        const description = page.frontmatter?.description
 
         
+          
         return (
           <li class="section-li feed-section">
            
-            <div class='page-header'>
+            <div class='feed-page-header'>
               <div class='popover-hint'>
 
                 <h2>
-                  
-                    {title}
-                  
+                  <a href={resolveRelative(fileData.slug!, page.slug!)} class="internal">
+                   {title}
+                  </a>
                 </h2>
+
+                <div>
+                  {description}
+                </div>
 
                 <p class="meta">
                 {page.dates && <Date date={getDate(cfg, page)!} locale={cfg.locale} />}
@@ -117,9 +80,7 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
               </details> : null }
             </article>
 
-            <p><a href={resolveRelative(fileData.slug!, page.slug!)} class="internal">
-                   Оставить комментарий
-                  </a></p>
+            
 
             <hr/>
             
