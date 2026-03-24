@@ -72,13 +72,7 @@ export const PageContentList: QuartzComponent = ({ cfg, fileData, allFiles, limi
               
             </div>
             </div>
-            <article class='popover-hint'>
-              {contentBefore}
-              {contentAfter ? <details class='more'>
-                <summary class='internal'>Читать дальше...</summary>
-                {contentAfter}
-              </details> : null }
-            </article>
+            
 
             
 
